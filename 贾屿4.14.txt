@@ -1,0 +1,31 @@
+// Exercise 4.15 Solution: ex04_15.cpp
+// Calculate salesperson earnings.
+#include <iostream>
+#include <iomanip> // parameterized stream manipulators
+using namespace std; // sets numeric output precision
+
+int main()
+{
+   double sales; // gross weekly sales
+   double wage; // commissioned earnings
+   
+   // processing phase
+   // get first sales
+   cout << "Enter sales in dollars (-1 to end): ";
+   cin >> sales;
+
+   // set floating-point number format
+   cout << fixed << setprecision( 2 );
+
+   // loop until sentinel value read from user
+   while ( sales != -1.0 ) 
+   {    
+      wage = 200.0 + 0.09 * sales; // calculate wage
+      cout << "Salary is: $" << wage; // display salary
+      
+      // prompt for next sales
+      cout << "\n\nEnter sales in dollars (-1 to end): ";
+      cin >> sales;
+   } // end while
+} // end main
+
