@@ -1,0 +1,8 @@
+Matrix&Matrix::operator +=(const
+Matrix&a)
+{
+  for(int=0;i<rows;++i)
+     for(intj=0;j<cols;++j)
+     n[i][j]=n[i][j]+a.n[i][j];
+  return tem;
+}
